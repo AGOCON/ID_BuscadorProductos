@@ -1,4 +1,4 @@
-import pyautogui
+# import pyautogui
 from funciones import consultaTienda
 import streamlit as st
 import pandas as pd
@@ -51,6 +51,6 @@ else:
         st.write('Ha habido un error, por favor comunique el siguiente código a mesaayudaago@agoconsultores.com.mx', e)
         pass
 
-    btn_reiniciar = st.button('Reiniciar')
-    if btn_reiniciar:
-        pyautogui.hotkey("ctrl","F5")
+    # btn_reiniciar = st.button('Reiniciar')
+    # if btn_reiniciar:
+    #     pyautogui.hotkey("ctrl","F5")
