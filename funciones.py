@@ -3,7 +3,7 @@ import numpy as np
 import pyodbc
 
 def consultaTienda(tienda):
-    sql_con = pyodbc.connect('DRIVER={SQL Server Native Client 11.0};SERVER=192.168.1.71,1433;DATABASE=AgoSorianaHist;UID=usrBIVentas;PWD=@goXc8rW;')
+    sql_con = pyodbc.connect('DRIVER={SQL Server Native Client 11.0};SERVER=148.245.208.249,1538;DATABASE=AgoSorianaHist;UID=usrBIVentas;PWD=@goXc8rW;')
     tsql = f'''
     SELECT
         E.Clasificacion Categoria,
