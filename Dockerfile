@@ -1,10 +1,4 @@
-FROM ubuntu:latest
-
-RUN apt-get upgrade
-
-RUN apt-get update
-
-RUN apt-get install bash-completion
+FROM base_proyectos:latest
 
 RUN apt-get install python3 python3-pip -y
 
@@ -18,4 +12,5 @@ COPY funciones.py /appStreamlit
 
 EXPOSE 8501
 
-ENTRYPOINT ["streamlit", "run", "/appStreamlit/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# ENTRYPOINT ["streamlit", "run", "/appStreamlit/app.py", "--server.port=8501", "--server.address=0.0.0.0"]0
+ENTRYPOINT ["streamlit", "run", "/appStreamlit/app.py", "--server.port=8501"]

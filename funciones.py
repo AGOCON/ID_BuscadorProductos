@@ -2,8 +2,12 @@ import pandas as pd
 import numpy as np
 import pyodbc
 
+bdd = 'AgoSorianaHist'
+uid = 'usrBIVentas'
+pwr = '@goXc8rW'
+
 def consultaTienda(tienda):
-    sql_con = pyodbc.connect('DRIVER={SQL Server Native Client 11.0};SERVER=148.245.208.249,1538;DATABASE=AgoSorianaHist;UID=usrBIVentas;PWD=@goXc8rW;')
+    sql_con = pyodbc.connect(f'DSN=dsSorianaHist;DATABASE={bdd};UID={uid};PWD={pwr};')
     tsql = f'''
     SELECT
         E.Clasificacion Categoria,
